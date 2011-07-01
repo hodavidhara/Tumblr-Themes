@@ -9,10 +9,11 @@
 		<meta name="description" content="{MetaDescription}" />
 	{/block:Description}
   <meta name="color:Header" content="#4B9BD6"/>
-  <meta name="font:Text" content="Helvetica"/>
-  <meta name="color:Text" content="#D8D8D8"/>
+  <meta name="color:Text" content="#808080"/>
   <meta name="color:Link" content="#4B9BD6"/>
   <meta name="color:Link Hover" content="#4B9BD6"/>
+  <meta name="color:Post Background" content="#D6D6D6"/>
+  <meta name="font:Text" content="Helvetica"/>
   
   <style type="text/css">
     {CustomCSS}
@@ -21,18 +22,20 @@
 <body>
   <div class="center">
     <div class="info">
-      <h1 id="title">{Title}</h1>
-        {block:Description}
-          <p id="description">{Description}</p>
-        {/block:Description}
+      <div class="info-wrapper">
+          {block:Description}
+            <p id="description">{Description}</p>
+          {/block:Description}      
+          <h1 id="title">{Title}</h1>
+      </div>      
     </div>
     <div class="posts">
       {block:Posts}
           {block:Text}
               <div class="post text">
                   {block:Title}
-                      <h3><a href="{Permalink}">{Title}</a></h3>
-                  {/block:Title}
+                    <h2><a href="{Permalink}">{Title}</a></h2>
+                  {/block:Title}                  
     
                   {Body}
               </div>
@@ -95,27 +98,27 @@
                           </li>
                       {/block:Lines}
                   </ul>
-              </li>
+              </div>
           {/block:Chat}
     
           {block:Video}
-              <li class="post video">
+              <div class="post video">
                   {Video-500}
     
                   {block:Caption}
                       <div class="caption">{Caption}</div>
                   {/block:Caption}
-              </li>
+              </div>
           {/block:Video}
     
           {block:Audio}
-              <li class="post audio">
-                  {AudioPlayerBlack}
+              <div class="post audio">
+                  {AudioPlayerWhite}
     
                   {block:Caption}
                       <div class="caption">{Caption}</div>
                   {/block:Caption}
-              </li>
+              </div>
           {/block:Audio}
       {/block:Posts}
     </div>
