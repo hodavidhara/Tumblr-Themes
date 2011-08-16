@@ -72,9 +72,31 @@ a:hover {
 }
 
 .post {
-  width: 800px;
+  width: 650px;
   margin: 50px auto;
   border: 1px solid {color:Text};
   border-radius: 10px;
   padding: 20px;
 }
+
+
+/*  THIS IS HOW TO MAKE AWESOME BULLETS! (or use an image)
+.main ul li {
+    font-weight: bold;
+    margin: 8px 0;
+    list-style: none;
+}
+
+
+.main ul li:before {
+    content:'\2022';
+    display: block;
+    position: relative;
+    max-width: 0px;
+    max-height: 0px;
+    left: -15px;
+    top: -0px;
+    color: #007BFF;
+    font-size: 20px;
+}
+*/
